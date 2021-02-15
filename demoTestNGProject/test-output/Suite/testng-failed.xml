@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="Test123"/>
+  <parameter name="username" value="TestUser"/>
+  <listeners>
+    <listener class-name="testScripts.CustomReport"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testScripts.GooglePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="searchTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testScripts.GooglePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
